@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Captain Traders | Learn · Understand · Trade Responsibly</title>
+<link rel="icon" type="image" href="/pic1.jpeg" >
+<meta name="description" content="Join the official Captain Traders WhatsApp community for general market updates, educational trading content and community announcements.">
+<meta property="og:title" content="Captain Traders">
+<meta property="og:description" content="Learn · Understand · Trade Responsibly. Join our official WhatsApp community.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#060b17">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060b17; --bg2:#0b1426; --text:#e8eefc; --muted:#9aa8c7;
+  --cyan:#2ee6d0; --blue:#3b82f6; --gold:#f5c26b;
+  --glass:rgba(255,255,255,.05); --line:rgba(255,255,255,.1);
+  --wa:#25d366; --wa2:#128c7e;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
+h1,h2,h3{font-family:'Sora',system-ui,sans-serif;line-height:1.12;margin:0}
+a{color:inherit}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:8px}
+
+/* background */
+.bg{position:fixed;inset:0;z-index:-1;background:radial-gradient(1200px 700px at 80% -10%,#10305a55,transparent 60%),radial-gradient(900px 600px at 0% 30%,#0d5c5a33,transparent 60%),linear-gradient(180deg,var(--bg),var(--bg2));overflow:hidden}
+.bg::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;opacity:.35;mask-image:radial-gradient(ellipse at 50% 30%,#000 20%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse at 50% 30%,#000 20%,transparent 75%)}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.35;animation:drift 18s ease-in-out infinite alternate}
+.orb.a{width:380px;height:380px;background:var(--blue);top:8%;right:-80px}
+.orb.b{width:320px;height:320px;background:var(--cyan);bottom:10%;left:-90px;animation-delay:-8s}
+@keyframes drift{to{transform:translate(-40px,50px) scale(1.15)}}
+.chart{position:absolute;left:0;right:0;top:8vh;width:100%;height:60vh;opacity:.55}
+.chart path.line{stroke-dasharray:2400;stroke-dashoffset:2400;animation:draw 3.2s .3s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+/* nav */
+header{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(6,11,23,.6);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{font-family:'Sora',sans-serif;font-weight:800;letter-spacing:.06em;text-decoration:none;display:flex;align-items:center;gap:10px}
+.brand svg{width:28px;height:28px}
+nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;color:var(--muted);font-weight:500;transition:color .2s}
+nav a:hover{color:var(--text)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--text);width:44px;height:44px;border-radius:12px;cursor:pointer}
+.menu-btn svg{width:22px;height:22px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:999px;font:700 1rem 'Sora',sans-serif;letter-spacing:.03em;text-decoration:none;color:#04140d;background:linear-gradient(120deg,var(--wa),var(--cyan));box-shadow:0 10px 30px -8px #25d366aa;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.btn::after{content:"";position:absolute;top:0;left:-70%;width:50%;height:100%;background:linear-gradient(100deg,transparent,#ffffff77,transparent);transform:skewX(-20deg);transition:left .6s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 16px 40px -8px #25d366cc}
+.btn:hover::after{left:130%}
+.btn:active{transform:translateY(0)}
+.btn .arrow{transition:transform .25s}
+.btn:hover .arrow{transform:translateX(5px)}
+.pulse{animation:pulse 2.8s infinite}
+@keyframes pulse{0%{box-shadow:0 10px 30px -8px #25d366aa,0 0 0 0 #25d36655}70%{box-shadow:0 10px 30px -8px #25d366aa,0 0 0 18px #25d36600}100%{box-shadow:0 10px 30px -8px #25d366aa,0 0 0 0 #25d36600}}
+
+/* hero */
+.hero{min-height:calc(100svh - 68px);display:grid;place-items:center;text-align:center;padding:72px 0 56px}
+.hero h1{font-size:clamp(2.6rem,9vw,6rem);font-weight:800;letter-spacing:.02em;background:linear-gradient(180deg,#fff 30%,#9db6e6);-webkit-background-clip:text;background-clip:text;color:transparent;animation:rise .9s ease both}
+.tag{font:600 clamp(1.05rem,2.6vw,1.6rem) 'Sora',sans-serif;color:var(--gold);margin:18px 0 22px;animation:rise .9s .12s ease both}
+.hero p.lead{max-width:600px;margin:0 auto 34px;color:var(--muted);font-size:clamp(1rem,2vw,1.2rem);animation:rise .9s .24s ease both}
+.hero .btn{animation:rise .9s .36s ease both,pulse 2.8s 1.4s infinite}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:34px;animation:rise .9s .5s ease both}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:var(--glass);border:1px solid var(--line);font-size:.92rem;color:var(--text)}
+.chip i{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+
+/* sections */
+section{padding:88px 0}
+.sec-head{max-width:640px;margin-bottom:44px}
+.sec-head h2{font-size:clamp(1.9rem,4.5vw,3rem);margin-bottom:12px}
+.sec-head p{color:var(--muted);margin:0}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--glass);border:1px solid var(--line);border-radius:22px;padding:32px 28px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);transition:transform .3s,border-color .3s,box-shadow .3s;position:relative}
+.card:hover{transform:translateY(-8px);border-color:#2ee6d055;box-shadow:0 24px 50px -20px #2ee6d044}
+.icon{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,#2ee6d030,#3b82f030);border:1px solid var(--line);margin-bottom:20px;transition:transform .3s}
+.card:hover .icon{transform:rotate(-6deg) scale(1.08)}
+.icon svg{width:26px;height:26px;stroke:var(--cyan);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:1.35rem;margin-bottom:14px}
+.card ul{list-style:none;margin:0;padding:0;color:var(--muted)}
+.card li{padding:6px 0 6px 24px;position:relative}
+.card li::before{content:"";position:absolute;left:0;top:15px;width:10px;height:2px;background:var(--gold);border-radius:2px}
+
+/* why */
+.why{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:start}
+.why h2{font-size:clamp(2rem,5vw,3.4rem)}
+.why .sub{color:var(--muted);margin-top:16px;max-width:380px}
+.points{display:grid;gap:14px}
+.point{display:flex;gap:16px;align-items:flex-start;padding:20px 22px;background:var(--glass);border:1px solid var(--line);border-radius:18px;transition:border-color .3s,transform .3s}
+.point:hover{border-color:#f5c26b66;transform:translateX(6px)}
+.point svg{flex:none;width:24px;height:24px;stroke:var(--gold);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-top:3px}
+.point strong{font-family:'Sora',sans-serif;display:block;margin-bottom:2px}
+.point span{color:var(--muted);font-size:.95rem}
+
+/* cta */
+.cta{text-align:center;padding:64px 28px;border-radius:32px;border:1px solid #2ee6d044;background:radial-gradient(600px 300px at 50% 0%,#2ee6d026,transparent 70%),linear-gradient(135deg,#0f2a4a99,#0b1a3399);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);position:relative;overflow:hidden}
+.cta h2{font-size:clamp(1.8rem,4.5vw,3rem);margin-bottom:14px}
+.cta p{color:var(--muted);max-width:520px;margin:0 auto 30px}
+
+/* disclaimer + footer */
+.disc{padding:0 0 72px}
+.disc-box{display:flex;gap:18px;padding:26px 28px;border-radius:18px;background:rgba(245,194,107,.06);border:1px solid rgba(245,194,107,.3)}
+.disc-box svg{flex:none;width:28px;height:28px;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.disc-box h3{font-size:1.05rem;margin-bottom:6px;color:var(--gold)}
+.disc-box p{margin:0;color:#c9d3ea;font-size:.95rem}
+footer{border-top:1px solid var(--line);padding:48px 0 36px;text-align:center;background:rgba(3,7,15,.5)}
+footer .brand{justify-content:center;font-size:1.3rem}
+footer .motto{color:var(--gold);font:600 .82rem 'Sora',sans-serif;letter-spacing:.2em;margin:10px 0 22px}
+footer ul{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;list-style:none;margin:0 0 26px;padding:0}
+footer ul a{color:var(--muted);text-decoration:none;transition:color .2s}
+footer ul a:hover{color:var(--cyan)}
+footer small{color:#6f7d9d}
+
+@media (max-width:900px){
+  .grid3{grid-template-columns:1fr}
+  .why{grid-template-columns:1fr;gap:32px}
+  section{padding:64px 0}
+}
+@media (max-width:760px){
+  .menu-btn{display:grid;place-items:center}
+  nav{position:absolute;left:0;right:0;top:68px;background:rgba(6,11,23,.96);border-bottom:1px solid var(--line);display:none}
+  nav.open{display:block}
+  nav ul{flex-direction:column;gap:0;padding:8px 20px 16px}
+  nav a{display:block;padding:14px 0;border-bottom:1px solid var(--line)}
+  .btn{padding:15px 24px;font-size:.92rem}
+  .disc-box{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .chart path.line{stroke-dashoffset:0}
+}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true">
+  <div class="orb a"></div><div class="orb b"></div>
+  <svg class="chart" viewBox="0 0 1200 500" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#3b82f6" stop-opacity="0"/><stop offset=".5" stop-color="#2ee6d0"/><stop offset="1" stop-color="#f5c26b"/></linearGradient>
+      <linearGradient id="fg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2ee6d0" stop-opacity=".18"/><stop offset="1" stop-color="#2ee6d0" stop-opacity="0"/></linearGradient>
+    </defs>
+    <path d="M0 400 L100 360 L180 385 L280 300 L360 320 L470 220 L560 260 L660 170 L760 200 L860 110 L960 150 L1080 70 L1200 90 L1200 500 L0 500Z" fill="url(#fg)"/>
+    <path class="line" d="M0 400 L100 360 L180 385 L280 300 L360 320 L470 220 L560 260 L660 170 L760 200 L860 110 L960 150 L1080 70 L1200 90" fill="none" stroke="url(#lg)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <g fill="#2ee6d0" opacity=".6"><circle cx="470" cy="220" r="4"/><circle cx="860" cy="110" r="4"/><circle cx="1080" cy="70" r="5" fill="#f5c26b"/></g>
+  </svg>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Captain Traders home">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#0f2a4a"/><path d="M6 22 12 15l5 4 9-11" stroke="#2ee6d0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="26" cy="8" r="2.4" fill="#f5c26b"/></svg>
+      CAPTAIN TRADER
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav id="nav" aria-label="Main">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#community">Community</a></li>
+        <!-- <li><a href="#disclaimer">Disclaimer</a></li> -->
+        <li><a href="#join" data-wa target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap">
+      <h1>CAPTAIN TRADERS</h1>
+      <div class="tag">Learn · Understand · Trade Responsibly</div>
+      <p class="lead">Join our official WhatsApp community for general market updates, educational trading content and community announcements.</p>
+      <a class="btn" href="#" data-wa target="_blank" rel="noopener noreferrer">JOIN WHATSAPP COMMUNITY <span class="arrow" aria-hidden="true">→</span></a>
+      <div class="chips" role="list">
+        <span class="chip" role="listitem"><i></i>Free Community Access</span>
+        <span class="chip" role="listitem"><i></i>Educational Content</span>
+        <span class="chip" role="listitem"><i></i>Market Updates</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section id="education" aria-labelledby="what-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="what-h">What you'll find inside</h2>
+        <p>A focused community built around general information and education, not tips or promises.</p>
+      </div>
+      <div class="grid3">
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-9"/><path d="M15 6h6v6"/></svg></div>
+          <h3>Market Updates</h3>
+          <ul><li>General market information</li><li>Community updates</li><li>Educational market discussions</li></ul>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5"/></svg></div>
+          <h3>Education</h3>
+          <ul><li>Learn trading concepts</li><li>Improve market understanding</li><li>Develop disciplined decision-making</li></ul>
+        </article>
+        <article class="card" id="community">
+          <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><circle cx="17.5" cy="9" r="2.5"/><path d="M17 14c2.6.2 4.5 2 4.5 5"/></svg></div>
+          <h3>Community</h3>
+          <ul><li>Stay connected</li><li>Join discussions</li><li>Receive community announcements</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="why-h">
+    <div class="wrap why">
+      <div>
+        <h2 id="why-h">Learn.<br>Understand.<br>Improve.</h2>
+        <p class="sub">Better decisions start with knowledge, patience and a clear view of risk.</p>
+      </div>
+      <div class="points">
+        <div class="point"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h7a3 3 0 013 3v11a2 2 0 00-2-2H4z"/><path d="M20 5h-3"/></svg><div><strong>Learn market concepts</strong><span>Build a solid grounding in how markets work.</span></div></div>
+        <div class="point"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg><div><strong>Understand risk</strong><span>Every trade carries risk. Learn to recognise and manage it.</span></div></div>
+        <div class="point"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v3"/></svg><div><strong>Develop discipline</strong><span>Focus on process and consistency over impulse.</span></div></div>
+        <div class="point"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><div><strong>Access educational content</strong><span>Explanations and discussions shared with the community.</span></div></div>
+        <div class="point"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/></svg><div><strong>Stay connected</strong><span>Follow announcements and talk with like-minded learners.</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="join" aria-labelledby="cta-h">
+    <div class="wrap">
+      <div class="cta">
+        <h2 id="cta-h">Join the CAPTAIN Traders Community</h2>
+        <p>Stay connected with educational content, general market updates and community announcements.</p>
+        <a class="btn pulse" href="#" data-wa target="_blank" rel="noopener noreferrer">JOIN WHATSAPP COMMUNITY <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- <section class="disc" id="disclaimer" aria-labelledby="disc-h">
+    <div class="wrap">
+      <div class="disc-box" role="note">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg>
+        <!-- <div>
+          <h3 id="disc-h">Risk Disclaimer</h3>
+          <p>Trading involves financial risk and losses are possible. Content is provided for general educational and informational purposes only and is not a guarantee of results or financial returns. Make independent decisions and use appropriate risk management.</p>
+        </div> -->
+      <!-- </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">CAPTAIN TRADERS</div>
+    <div class="motto">EDUCATION | DISCIPLINE | RISK MANAGEMENT</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#community">Community</a></li>
+      <li><a href="#disclaimer">Disclaimer</a></li>
+      <li><a href="#join" data-wa target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+    </ul>
+    <small>© 2026 CAPTAIN Traders. All Rights Reserved.</small>
+  </div>
+</footer> -->
+
+<script>
+  /* ===== EDIT HERE: your WhatsApp community / channel link ===== */
+  const WHATSAPP_URL = "https://whatsapp.com/channel/0029Vb8yPv79mrGXvimAqQ0k";
+  /* ============================================================= */
+
+  document.querySelectorAll("[data-wa]").forEach(a => a.setAttribute("href", WHATSAPP_URL));
+
+  const btn = document.getElementById("menuBtn"), nav = document.getElementById("nav");
+  btn.addEventListener("click", () => {
+    const open = nav.classList.toggle("open");
+    btn.setAttribute("aria-expanded", open);
+  });
+  nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+    nav.classList.remove("open"); btn.setAttribute("aria-expanded", "false");
+  }));
+</script>
+</body>
+</html>
